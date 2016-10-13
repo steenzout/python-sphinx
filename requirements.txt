@@ -1,2 +1,4 @@
-#package==version
-#-e git+ssh://github.com/steenzout/example.git@TAG#egg=example
+recommonmark==0.4.0
+semantic_version==2.5.0
+Sphinx==1.4.5
+sphinx_rtd_theme==0.1.9
