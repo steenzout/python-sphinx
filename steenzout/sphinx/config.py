@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-.. module:: company.package.config
+.. module:: steenzout.sphinx.config
     :platform: Unix
     :synopsis: Configuration utilities.
 
@@ -19,7 +19,7 @@ except ImportError:
 import logging
 
 
-DEFAULT_CONFIG_FILE = '/etc/package/package.cfg'
+DEFAULT_CONFIG_FILE = '/etc/sphinx/sphinx.cfg'
 
 
 class Cache(object):

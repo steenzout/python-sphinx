@@ -1,20 +1,20 @@
 # -*- coding: utf-8 -*-
 """
-.. module:: company.package
+.. module:: steenzout.sphinx
     :platform: Unix
-    :synopsis: Company package.
+    :synopsis: Company sphinx.
 
 .. moduleauthor:: Your Name <email address>
 """
 
-from company.package.version import __version__
+from steenzout.sphinx.version import __version__
 
 
 def version():
     """
-    Return this package version.
+    Return this sphinx version.
 
-    :return: package version.
+    :return: sphinx version.
     :rtype: str
     """
     return __version__
