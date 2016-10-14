@@ -10,13 +10,16 @@ class ResourceGeneratorTestCase(unittest.TestCase):
     """Tests for the steenzout.sphinx.ResourceGenerator class."""
 
     @staticmethod
-    def _compare_output(expected, output):
+    def _compare_output(filename, output):
 
         assert output is not None
 
         content = None
-        with open('tests/resources/%s' % expected, 'r') as fd:
+        with open('tests/resources/%s' % filename, 'r') as fd:
             content = fd.read()
+
+        with open('tests/output/%s' % filename, 'w') as fd:
+            fd.write(output)
 
         assert content == output
 
