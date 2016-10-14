@@ -17,23 +17,24 @@
 """Package to standardize Sphinx documentation in a GitHub organization."""
 
 from jinja2 import Environment, PackageLoader
+from steenzout.object import Object
 
 
-class Organization(object):
+class Organization(Object):
 
     def __init__(self, name, package):
         self.name = name
         self.package = package
         self.metadata = __import__('%s.metadata' % package)
-        self.env = None
-
-    def _load_environment(self):
-        """Load Jinja 2 environment."""
         self.env = Environment(
             loader=PackageLoader('%s.sphinx' % self.name, 'templates'))
 
     def generate_conf(self):
-        return self.env.get_template('conf.py.j2').render(metadata=self.metadata)
+        return self.env.get_template('conf.py.j2').render(
+            metadata=self.metadata,
+            package=self.package)
 
     def generate_makefile(self):
-        return self.env.get_template('Makefile.j2').render(metadata=self.metadata)
+        return self.env.get_template('Makefile.j2').render(
+            metadata=self.metadata,
+            package=self.package)
