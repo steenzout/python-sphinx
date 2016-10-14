@@ -34,7 +34,7 @@ import semantic_version
 from recommonmark.parser import CommonMarkParser
 
 
-_package = '{{ metadata.__name__[:metadata.__name__.rindex('.')] }}'
+_package = '{{ package }}'
 _version = semantic_version.Version('{{ metadata.__version__ }}')
 
 # -- General configuration ------------------------------------------------
