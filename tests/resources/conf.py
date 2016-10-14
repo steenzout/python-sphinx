@@ -39,7 +39,7 @@ from recommonmark.parser import CommonMarkParser
 
 
 _package = 'steenzout.sphinx'
-_version = semantic_version.Version('{{ metadata.__version__ }}')
+_version = semantic_version.Version('0.0.1')
 
 # -- General configuration ------------------------------------------------
 
@@ -83,8 +83,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = _package
-author = '{{ metadata.__author__ }}'
-copyright = '{{ metadata.__copyright__ }}'
+author = 'Pedro Salgado'
+copyright = '2016, Pedro Salgado'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -353,7 +353,7 @@ man_pages = [(
     master_doc,
     'py_%s' % _package.replace('.', '_'),
     '%s documentation' % _package,
-    ['{{ metadata.__author__ }}'],
+    ['Pedro Salgado'],
     1
 )]
 
@@ -378,7 +378,7 @@ texinfo_documents = [(
     master_doc,
     u'py_%s' % _package.replace('.', '_'),
     u'%s documentation' % _package,
-    '{{ metadata.__author__ }}',
+    'Pedro Salgado',
     u'',
     u'%s documentation.' % _package,
     u'Miscellaneous'
