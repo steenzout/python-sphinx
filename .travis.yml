@@ -6,15 +6,10 @@ branches:
 
 cache:
   directories:
-    - "${HOME}/virtualenv"
-    - "${TRAVIS_BUILD_DIR}/.tox"
+    - "${HOME}/.pip"
 
 python:
-  - 2.6
   - 2.7
-  - 3.3
-  - 3.4
-  - 3.5
   - 3.6
   - pypy
 
@@ -30,10 +25,9 @@ install:
 
 script:
   - tox
-  - "find ${TRAVIS_BUILD_DIR}/.tox -name log -o -name __pycache__ -type d | xargs -I {} rm -rf {}"
 
 after_success:
-  - pylint company
+  - pylint steenzout
   - pip install coveralls
   - coveralls
 
