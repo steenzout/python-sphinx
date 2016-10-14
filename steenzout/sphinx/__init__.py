@@ -21,6 +21,7 @@ from steenzout.object import Object
 
 
 class ResourceGenerator(Object):
+    """Class to generate Sphinx resources."""
 
     def __init__(self, organization, package):
         self.name = organization
@@ -34,7 +35,7 @@ class ResourceGenerator(Object):
             metadata=self.metadata,
             package=self.package)
 
-    def generate_makefile(self):
+    def makefile(self):
         return self.env.get_template('Makefile.j2').render(
             metadata=self.metadata,
             package=self.package)
