@@ -28,13 +28,17 @@ use os.path.abspath to make it absolute, like shown here.
 
 
 import sys
+import os
+
+sys.path.insert(0, os.path.abspath('..'))
+
 
 import semantic_version
 
 from recommonmark.parser import CommonMarkParser
 
 
-_package = '{{ package }}'
+_package = 'steenzout.sphinx'
 _version = semantic_version.Version('{{ metadata.__version__ }}')
 
 # -- General configuration ------------------------------------------------
