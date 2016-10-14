@@ -29,7 +29,7 @@ from . import ResourceGenerator
 @click.argument('organization', type=click.STRING)
 @click.argument('package', type=click.STRING)
 @click.argument('destination', type=click.Path(
-    exists=True, file_okay=False, dir_okay=True, writable=True, resolve_path=True))
+    exists=True, file_okay=False, dir_okay=True, writable=True))
 def generate(organization, package, destination):
     """Generates the Sphinx configuration and Makefile.
 
