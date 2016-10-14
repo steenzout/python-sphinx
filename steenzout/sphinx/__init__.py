@@ -20,7 +20,7 @@ from jinja2 import Environment, PackageLoader
 from steenzout.object import Object
 
 
-class Organization(Object):
+class ResourceGenerator(Object):
 
     def __init__(self, organization, package):
         self.name = organization
