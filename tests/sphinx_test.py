@@ -16,4 +16,4 @@ class ResourceGeneratorTestCase(unittest.TestCase):
         assert self.generator.conf() is None
 
     def test_generate_makefile(self):
-        assert self.generator.generate_makefile() is None
+        assert self.generator.makefile() is None
