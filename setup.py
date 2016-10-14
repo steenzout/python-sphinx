@@ -7,7 +7,7 @@ from pip.req import parse_requirements
 
 from setuptools import find_packages, setup
 
-exec(open('company/package/version.py').read())
+exec(open('steenzout/sphinx/metadata.py').read())
 
 
 def requirements(requirements_file):
@@ -17,22 +17,21 @@ def requirements(requirements_file):
         requirements_file (str): path to the requirements file to be parsed.
 
     Returns:
-        (list): 3rd-party package dependencies contained in the file.
+        (list): 3rd-party sphinx dependencies contained in the file.
     """
     return [
         str(pkg.req) for pkg in parse_requirements(
             requirements_file, session=pip.download.PipSession())]
 
 
-setup(name='primogen',
+setup(name='steenzout.sphinx',
       version=__version__,
-      description='Python basic package.',
-      author='Pedro Salgado',
-      author_email='steenzout@ymail.com',
-      maintainer='Pedro Salgado',
-      maintainer_email='steenzout@ymail.com',
-      url='https://github.com/steenzout/python-package',
-      namespace_packages=('company',),
+      description=__description__,
+      author=__author__,
+      author_email=__author_email__,
+      maintainer=__maintainer__,
+      maintainer_email=__maintainer_email__,
+      classifiers=__classifiers__,
       packages=find_packages(exclude=('*.tests', '*.tests.*', 'tests.*', 'tests')),
       install_requires=requirements('requirements.txt'),
       tests_require=requirements('requirements-test.txt'))
