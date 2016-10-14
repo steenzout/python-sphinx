@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """Tests for the steenzout.sphinx package."""
 
+import filecmp
 import unittest
 
 from steenzout.sphinx import ResourceGenerator
@@ -14,14 +15,12 @@ class ResourceGeneratorTestCase(unittest.TestCase):
 
         assert output is not None
 
-        content = None
-        with open('tests/resources/%s' % filename, 'r') as fd:
-            content = fd.read()
-
         with open('tests/output/%s' % filename, 'w') as fd:
             fd.write('%s\n' % output)
 
-        assert content == output
+        assert filecmp.cmp(
+            'tests/resources/%s' % filename,
+            'tests/output/%s' % filename)
 
     def setUp(self):
         self.generator = ResourceGenerator('steenzout', 'steenzout.sphinx')
