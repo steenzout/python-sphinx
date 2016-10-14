@@ -302,7 +302,7 @@ latex_documents = [(
     master_doc,
     u'py_%s.tex' % _package.replace('.', '_'),
     u'%s documentation' % _package,
-    '{{ metadata.__author__  }}',
+    'Pedro Salgado',
     u'manual'
 )]
 
