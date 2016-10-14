@@ -1,5 +1,5 @@
-python-primogen
-===============
+python-sphinx
+=============
 
 [![Build Status](https://travis-ci.org/steenzout/python-primogen.svg?branch=master)](https://travis-ci.org/steenzout/python-primogen)
 [![Code Health](https://landscape.io/github/steenzout/python-primogen/master/landscape.svg?style=flat)](https://landscape.io/github/steenzout/python-primogen/master)
@@ -11,22 +11,22 @@ This repository's goal is to be a starting point for Python projects.
 It uses:
 
 - [git](http://git-scm.com) for version control
-- [pip](http://www.pip-installer.org/en/latest/) to manage Python packages
+- [pip](http://www.pip-installer.org/en/latest/) to manage Python sphinxs
 - [tox](http://tox.readthedocs.org/en/latest/) for automation and setup development environments
 - [Sphinx](http://sphinx-doc.org) for documentation
 
 
-company
+steenzout
 -------
 
 This is the directory which will hold your files.
 
-Rename "company" with your company's name or product.
+Rename "steenzout" with your steenzout's name or product.
 
-In this empty project the company package is a namespace package,
+In this empty project the steenzout sphinx is a namespace sphinx,
 meaning it was defined in another repository.
 
-You may not need to do this but it's here to make an example of how to define namespace packages,
+You may not need to do this but it's here to make an example of how to define namespace sphinxs,
 what to add on the __init__.py file and in the setup.py file.
 
 
@@ -80,7 +80,7 @@ with [Markdown](http://daringfireball.net/projects/markdown/) syntax.
 requirements.txt
 ----------------
 
-On this file you specify the list of packages the project depends.
+On this file you specify the list of sphinxs the project depends.
 
 Read "[pip : Requirement Files](http://www.pip-installer.org/en/latest/user_guide.html#requirements-files)"
 to understand how you can properly use this file to define your project's dependencies.
@@ -105,7 +105,7 @@ The directory where you should add your unit tests.
 test-requirements.txt
 ---------------------
 
-On this file you specify the list of packages the project needs to run its tests.
+On this file you specify the list of sphinxs the project needs to run its tests.
 
 An example of the possible contents of this file has been provided.
 
