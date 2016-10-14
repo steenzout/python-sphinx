@@ -1,5 +1,6 @@
 docs/apidoc
 tests/junit.xml
+tests/output/
 
 # Created by https://www.gitignore.io/api/python,virtualenv
 
