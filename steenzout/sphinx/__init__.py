@@ -22,8 +22,8 @@ from steenzout.object import Object
 
 class Organization(Object):
 
-    def __init__(self, name, package):
-        self.name = name
+    def __init__(self, organization, package):
+        self.name = organization
         self.package = package
         self.metadata = __import__('%s.metadata' % package)
         self.env = Environment(
