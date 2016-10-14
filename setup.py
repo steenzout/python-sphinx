@@ -37,5 +37,5 @@ setup(name='steenzout.sphinx',
       tests_require=requirements('requirements-test.txt'),
       entry_points={
           'console_scripts': [
-              'steenzout-sphinx-generate = steenzout.sphinx:generate',
+              'steenzout-sphinx-generate = steenzout.sphinx.cli:generate',
           ]})
