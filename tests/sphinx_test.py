@@ -7,7 +7,7 @@ from steenzout.sphinx import ResourceGenerator
 
 
 class ResourceGeneratorTestCase(unittest.TestCase):
-    """Tests for the steenzout.sphinx.Organization class."""
+    """Tests for the steenzout.sphinx.ResourceGenerator class."""
 
     def setUp(self):
         self.generator = ResourceGenerator('steenzout', 'steenzout.sphinx')
