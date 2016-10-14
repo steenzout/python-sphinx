@@ -16,6 +16,8 @@
 #
 """Package to standardize Sphinx documentation in a GitHub organization."""
 
+import importlib
+
 from jinja2 import Environment, PackageLoader
 from steenzout.object import Object
 
@@ -26,7 +28,7 @@ class ResourceGenerator(Object):
     def __init__(self, organization, package):
         self.name = organization
         self.package = package
-        self.metadata = __import__('%s.metadata' % package)
+        self.metadata = importlib.import_module('%s.metadata' % package)
         self.env = Environment(
             loader=PackageLoader('%s.sphinx' % self.name, 'templates'))
 
