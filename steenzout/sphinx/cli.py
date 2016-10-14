@@ -22,7 +22,7 @@ import tempfile
 
 import click
 
-from .. import ResourceGenerator
+from . import ResourceGenerator
 
 
 @click.command()
