@@ -19,7 +19,7 @@ class ResourceGeneratorTestCase(unittest.TestCase):
             content = fd.read()
 
         with open('tests/output/%s' % filename, 'w') as fd:
-            fd.write(output)
+            fd.write('%s\n' % output)
 
         assert content == output
 
