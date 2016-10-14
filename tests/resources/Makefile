@@ -50,7 +50,7 @@ clean:
 
 .PHONY: apidoc
 apidoc:
-	sphinx-apidoc -f -T --separate -o apidoc ../{{ package }}
+	sphinx-apidoc -f -T --separate -o apidoc ../steenzout.sphinx
 	ls apidoc/*.rst | xargs -I {} sed -i .bak '/:undoc-members:/d' {}
 	rm apidoc/*.bak
 	@echo "apidoc generation finished, look at the " \
