@@ -29,7 +29,7 @@ class ResourceGenerator(Object):
         self.env = Environment(
             loader=PackageLoader('%s.sphinx' % self.name, 'templates'))
 
-    def generate_conf(self):
+    def conf(self):
         return self.env.get_template('conf.py.j2').render(
             metadata=self.metadata,
             package=self.package)

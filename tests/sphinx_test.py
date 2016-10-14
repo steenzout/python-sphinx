@@ -13,7 +13,7 @@ class ResourceGeneratorTestCase(unittest.TestCase):
         self.generator = ResourceGenerator('steenzout', 'steenzout.sphinx')
 
     def test_generate_conf(self):
-        assert self.generator.generate_conf() is None
+        assert self.generator.conf() is None
 
     def test_generate_makefile(self):
         assert self.generator.generate_makefile() is None
