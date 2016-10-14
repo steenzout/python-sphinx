@@ -34,4 +34,8 @@ setup(name='steenzout.sphinx',
       classifiers=__classifiers__,
       packages=find_packages(exclude=('*.tests', '*.tests.*', 'tests.*', 'tests')),
       install_requires=requirements('requirements.txt'),
-      tests_require=requirements('requirements-test.txt'))
+      tests_require=requirements('requirements-test.txt'),
+      entry_points={
+          'console_scripts': [
+              'steenzout-sphinx-generate = steenzout.sphinx:generate',
+          ]})
