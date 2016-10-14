@@ -26,7 +26,6 @@ If the directory is relative to the documentation root,
 use os.path.abspath to make it absolute, like shown here.
 """
 
-
 import sys
 import os
 
