@@ -33,6 +33,7 @@ setup(name='steenzout.sphinx',
       maintainer_email=__maintainer_email__,
       classifiers=__classifiers__,
       packages=find_packages(exclude=('*.tests', '*.tests.*', 'tests.*', 'tests')),
+      package_data={'steenzout.sphinx': ['templates/*.j2']},
       install_requires=requirements('requirements.txt'),
       tests_require=requirements('requirements-test.txt'),
       entry_points={
