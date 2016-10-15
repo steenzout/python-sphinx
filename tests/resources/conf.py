@@ -64,7 +64,6 @@ templates_path = ['_templates']
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = '.rst'
-CommonMarkParser = CommonMarkParser
 source_parsers = {
     '.md': CommonMarkParser
 }
