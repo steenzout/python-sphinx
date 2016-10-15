@@ -1,4 +1,6 @@
 docs/apidoc
+docs/conf.py
+docs/Makefile
 tests/junit.xml
 tests/output/
 
