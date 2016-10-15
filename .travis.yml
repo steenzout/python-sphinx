@@ -9,8 +9,9 @@ cache:
     - "${HOME}/.pip"
 
 python:
-  - 2.7
   - 3.6
+  - 3.5
+  - 2.7
   - pypy
 
 
