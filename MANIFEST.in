@@ -6,7 +6,7 @@ include requirements-test.txt
 include pytest.ini
 include tox.ini
 
-recursive-include steenzout/sphinx/templates *.j2
+recursive-include steenzout *.j2
 recursive-include tests *.py
 
 recursive-exclude steenzout *.pyc
