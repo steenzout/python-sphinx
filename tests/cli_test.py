@@ -5,8 +5,6 @@ import mock
 import os
 import unittest
 
-import steenzout.sphinx
-
 from click.testing import CliRunner
 
 from steenzout.sphinx import cli
@@ -16,23 +14,6 @@ class GenerateTestCase(unittest.TestCase):
     """Test case for the generate command."""
 
     runner = CliRunner()
-
-    # def setUp(self):
-    #     # mock ResourceGenerator class
-    #     self.generator_class_patch = mock.patch('steenzout.sphinx.cli.ResourceGenerator', spec=True)
-    #     self.mock_generator_class = self.generator_class_patch.start()
-    #     self.mock_generator = self.mock_generator_class()
-    #
-    #     # mock ResourceGenerator.conf()
-    #     self.mock_generator.conf = mock.MagicMock()
-    #     self.mock_generator.conf.return_value = 'conf content'
-    #
-    #     # mock ResourceGenerator.makefile()
-    #     self.mock_generator.makefile = mock.MagicMock()
-    #     self.mock_generator.makefile.return_value = 'makefile content'
-    #
-    # def tearDown(self):
-    #     self.generator_class_patch.stop()
 
     @mock.patch('steenzout.sphinx.cli.ResourceGenerator')
     @mock.patch('steenzout.sphinx.cli.tempfile.NamedTemporaryFile', autospec=True)
