@@ -16,7 +16,7 @@ class ResourceGeneratorTestCase(unittest.TestCase):
         assert output is not None
 
         with open('tests/output/%s' % filename, 'w') as fd:
-            fd.write('%s\n' % output)
+            fd.write('%s' % output)
 
         assert filecmp.cmp(
             'tests/resources/%s' % filename,

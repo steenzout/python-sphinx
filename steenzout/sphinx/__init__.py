@@ -30,6 +30,7 @@ class ResourceGenerator(Object):
         self.package = package
         self.metadata = importlib.import_module('%s.metadata' % package)
         self.env = Environment(
+            keep_trailing_newline=True,
             loader=PackageLoader('%s.sphinx' % self.name, 'templates'))
 
     def conf(self):
