@@ -26,12 +26,12 @@ class ResourceGenerator(Object):
     """Class to generate Sphinx resources."""
 
     def __init__(self, organization, package):
-        self.name = organization
+        self.organization = organization
         self.package = package
         self.metadata = importlib.import_module('%s.metadata' % package)
         self.env = Environment(
             keep_trailing_newline=True,
-            loader=PackageLoader('%s.sphinx' % self.name, 'templates'))
+            loader=PackageLoader('%s.sphinx' % self.organization, 'templates'))
 
     def conf(self):
         return self.env.get_template('conf.py.j2').render(
