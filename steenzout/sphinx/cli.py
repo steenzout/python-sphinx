@@ -46,7 +46,7 @@ def generate(organization, package, destination):
     finally:
         tmp.close()
 
-    shutil.copy(tmp, os.path.join(destination, 'conf.py'))
+    shutil.copy(tmp.name, os.path.join(destination, 'conf.py'))
 
     tmp = tempfile.NamedTemporaryFile(mode='w+t', delete=False)
     try:
@@ -54,4 +54,4 @@ def generate(organization, package, destination):
     finally:
         tmp.close()
 
-    shutil.copy(tmp, os.path.join(destination, 'Makefile'))
+    shutil.copy(tmp.name, os.path.join(destination, 'Makefile'))
