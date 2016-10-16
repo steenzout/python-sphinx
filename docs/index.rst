@@ -4,6 +4,8 @@ steenzout.sphinx
 .. toctree::
    :maxdepth: 2
 
+   user/tutorial.rst
+
 
 API documentation
 =================
