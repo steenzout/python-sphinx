@@ -10,5 +10,7 @@
 [![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)][license]
 [![Project Stats](https://www.openhub.net/p/python-steenzout-sphinx/widgets/project_thin_badge.gif)](https://www.openhub.net/p/python-steenzout-sphinx/)
 
+Package to help produce and maintain Sphinx configuration and Makefile templates.
+
 
 [license]:  https://raw.githubusercontent.com/steenzout/python-sphinx/master/LICENSE    "License"
