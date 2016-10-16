@@ -23,7 +23,14 @@ from steenzout.object import Object
 
 
 class ResourceGenerator(Object):
-    """Class to generate Sphinx resources."""
+    """Class to generate Sphinx resources.
+
+    Args:
+        organization (str): name of the profile of the organization on GitHub.
+        package (str): package to be documented.
+        metadata (:py:module): module containing the package metadata.
+        env (:py:class`jinja2.Environment`): the Jinja2 environment.
+    """
 
     def __init__(self, organization, package):
         self.organization = organization
@@ -34,11 +41,21 @@ class ResourceGenerator(Object):
             loader=PackageLoader('%s.sphinx' % self.organization, 'templates'))
 
     def conf(self):
+        """Generate the Sphinx `conf.py` configuration file
+
+        Returns:
+            (str): the contents of the `conf.py` file.
+        """
         return self.env.get_template('conf.py.j2').render(
             metadata=self.metadata,
             package=self.package)
 
     def makefile(self):
+        """Generate the documentation Makefile.
+
+        Returns:
+            (str): the contents of the `Makefile`.
+        """
         return self.env.get_template('Makefile.j2').render(
             metadata=self.metadata,
             package=self.package)
