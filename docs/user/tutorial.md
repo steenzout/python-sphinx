@@ -48,7 +48,7 @@ whitelist_externals =
 Before you continue,
 you'll need to create a metadata module.
 
-For example,
+For example:
 
 ```python
    __author__ = u'Myself'
@@ -131,6 +131,9 @@ commands =
 whitelist_externals =
    /usr/bin/make
 ```
+
+You also need to add the project metadata into the
+`organization/project/metadata.py` file.
 
 In the end you can generate all the documentation
 with the `tox -e docs` command.
