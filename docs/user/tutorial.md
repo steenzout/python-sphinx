@@ -1,5 +1,4 @@
-Tutorial
---------
+# Tutorial
 
 Imagine your organization has several projects for which
 you need to generate documentation.
@@ -26,7 +25,6 @@ you'll need to build the Sphinx documentation for your project.
 
 For example:
 
-::
    recommonmark==0.4.0
    semantic_version==2.6.0
    Sphinx==1.4.8
@@ -37,7 +35,6 @@ After this you can setup the `docs` virtualenv in `tox`.
 
 For example:
 
-::
    [testenv:docs]
    usedevelop = False
    changedir = docs
@@ -63,7 +60,7 @@ you'll need to create a metadata module.
 
 For example,
 
-::
+```python
    __author__ = u'Myself'
    __author_email__ = u'email@example.com'
 
@@ -93,6 +90,7 @@ For example,
    __url__ = u'https://github.com/organization/python-sphinx/'
 
    __version__ = u'0.0.1'
+```
 
 This metadata module must be placed
 under `organization/sphinx/metadata.py` directory or
@@ -106,8 +104,10 @@ Check this project template files for an example.
 
 After you complete all of these tasks you can now generate your documentation using
 
-::
-   $ tox -e docs
+
+```bash
+$ tox -e docs
+```
 
 After you complete these steps and you are happy with the results
 you can use your new `organization.sphinx` templates in any of your projects.
@@ -115,12 +115,11 @@ you can use your new `organization.sphinx` templates in any of your projects.
 To achieves this you setup your `requirements-docs.txt`
 by addding your `organization.sphinx` package.
 
-::
+
    -e git+git@github.com:organization/python-sphinx.git@master#egg=organization-sphinx-master
 
 The `tox.ini` file for the project will only change the package being documented.
 
-::
    [testenv:docs]
    usedevelop = False
    changedir = docs
