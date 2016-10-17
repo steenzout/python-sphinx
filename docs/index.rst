@@ -1,6 +1,8 @@
 steenzout.sphinx
 ================
 
+.. include:: user/intro.md
+
 .. toctree::
    :maxdepth: 2
 
