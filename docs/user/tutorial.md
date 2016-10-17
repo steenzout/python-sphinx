@@ -13,11 +13,12 @@ you'll need to build the Sphinx documentation for your project.
 
 For example:
 
-   recommonmark==0.4.0
-   semantic_version==2.6.0
-   Sphinx==1.4.8
-   sphinx_rtd_theme==0.1.9
-
+```
+recommonmark==0.4.0
+semantic_version==2.6.0
+Sphinx==1.4.8
+sphinx_rtd_theme==0.1.9
+```
 
 After this you can setup the `docs` virtualenv in `tox`.
 
@@ -109,24 +110,26 @@ by addding your `organization.sphinx` package.
 
 The `tox.ini` file for the project will only change the package being documented.
 
-   [testenv:docs]
-   usedevelop = False
-   changedir = docs
+```
+[testenv:docs]
+usedevelop = False
+changedir = docs
 
-   deps =
-       -rrequirements.txt
-       -rrequirements-docs.txt
+deps =
+   -rrequirements.txt
+   -rrequirements-docs.txt
 
-   commands =
-       steenzout-sphinx-generate organization organization.project .
-       make dummy
-       make apidoc
-       make coverage
-       make changes
-       make html
+commands =
+   steenzout-sphinx-generate organization organization.project .
+   make dummy
+   make apidoc
+   make coverage
+   make changes
+   make html
 
-   whitelist_externals =
-       /usr/bin/make
+whitelist_externals =
+   /usr/bin/make
+```
 
 In the end, you can generate all the documentation
 with the `tox -e docs` command.
