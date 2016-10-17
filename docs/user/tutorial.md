@@ -23,25 +23,26 @@ After this you can setup the `docs` virtualenv in `tox`.
 
 For example:
 
-   [testenv:docs]
-   usedevelop = False
-   changedir = docs
+```
+[testenv:docs]
+usedevelop = False
+changedir = docs
 
-   deps =
-       -rrequirements.txt
-       -rrequirements-docs.txt
+deps =
+   -rrequirements.txt
+   -rrequirements-docs.txt
 
-   commands =
-       steenzout-sphinx-generate organization organization.sphinx .
-       make dummy
-       make apidoc
-       make coverage
-       make changes
-       make html
+commands =
+   steenzout-sphinx-generate organization organization.sphinx .
+   make dummy
+   make apidoc
+   make coverage
+   make changes
+   make html
 
-   whitelist_externals =
-       /usr/bin/make
-
+whitelist_externals =
+   /usr/bin/make
+```
 
 Before you continue,
 you'll need to create a metadata module.
