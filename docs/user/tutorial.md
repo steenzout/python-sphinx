@@ -105,8 +105,9 @@ you can use your new `organization.sphinx` templates in any of your projects.
 To achieves this you setup your `requirements-docs.txt`
 by addding your `organization.sphinx` package.
 
-
-   -e git+git@github.com:organization/python-sphinx.git@master#egg=organization-sphinx-master
+```
+-e git+git@github.com:organization/python-sphinx.git@master#egg=organization-sphinx-master
+```
 
 The `tox.ini` file for the project will only change the package being documented.
 
@@ -131,5 +132,7 @@ whitelist_externals =
    /usr/bin/make
 ```
 
-In the end, you can generate all the documentation
+In the end you can generate all the documentation
 with the `tox -e docs` command.
+
+_The End_
