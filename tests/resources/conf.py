@@ -38,7 +38,7 @@ from recommonmark.parser import CommonMarkParser
 
 
 _package = 'steenzout.sphinx'
-_version = semantic_version.Version('1.0.8')
+_version = semantic_version.Version('1.0.10')
 
 # -- General configuration ------------------------------------------------
 
