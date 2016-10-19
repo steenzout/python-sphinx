@@ -19,10 +19,9 @@
 import importlib
 
 from jinja2 import Environment, PackageLoader
-from steenzout.object import Object
 
 
-class ResourceGenerator(Object):
+class ResourceGenerator(object):
     """Class to generate Sphinx resources.
 
     Args:
