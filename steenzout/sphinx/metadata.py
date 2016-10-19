@@ -44,4 +44,4 @@ __maintainer_email__ = u'steenzout@ymail.com'
 
 __url__ = u'https://github.com/steenzout/python-sphinx/'
 
-__version__ = u'1.0.4'
+__version__ = u'1.0.6'
