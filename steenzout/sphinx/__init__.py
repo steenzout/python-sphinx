@@ -27,8 +27,8 @@ class ResourceGenerator(object):
     Args:
         organization (str): name of the profile of the organization on GitHub.
         package (str): package to be documented.
-        metadata (:py:module): module containing the package metadata.
-        env (:py:class`jinja2.Environment`): the Jinja2 environment.
+        metadata (Python module): module containing the package metadata.
+        env (:py:class:`jinja2.Environment`): the Jinja2 environment.
     """
 
     def __init__(self, organization, package):
