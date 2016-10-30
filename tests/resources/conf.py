@@ -38,7 +38,7 @@ from recommonmark.parser import CommonMarkParser
 
 
 _package = 'steenzout.sphinx'
-_version = semantic_version.Version('1.0.10')
+_version = semantic_version.Version('1.0.12')
 
 # -- General configuration ------------------------------------------------
 
@@ -398,3 +398,8 @@ texinfo_documents = [(
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #
 # texinfo_no_detailmenu = False
+
+# Generate API doc
+from sphinx import apidoc
+
+apidoc.main(['-f', '-T', '--separate', '-o', 'apidoc', '../steenzout'])
