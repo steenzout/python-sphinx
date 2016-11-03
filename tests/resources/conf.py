@@ -38,7 +38,7 @@ from recommonmark.parser import CommonMarkParser
 
 
 _package = 'steenzout.sphinx'
-_version = semantic_version.Version('1.0.12')
+_version = semantic_version.Version('1.0.14')
 
 # -- General configuration ------------------------------------------------
 
@@ -52,7 +52,6 @@ _version = semantic_version.Version('1.0.12')
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.coverage',
-    'sphinx.ext.imgmath',
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
 ]
