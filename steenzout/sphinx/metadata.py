@@ -36,7 +36,7 @@ __classifiers__ = [
     'Topic :: Documentation :: Sphinx',
     'Topic :: Software Development :: Documentation'
 ]
-__copyright__ = u'2016, %s' % __author__
+__copyright__ = u'2016-2018, %s' % __author__
 
 __description__ = u'Sphinx configuration for the steenzout GitHub organization.'
 
