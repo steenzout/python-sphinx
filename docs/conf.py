@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright 2016, Pedro Salgado
+# Copyright 2016-2018, Pedro Salgado
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -81,7 +81,7 @@ master_doc = 'index'
 # General information about the project.
 project = _package
 author = 'Pedro Salgado'
-copyright = '2016, Pedro Salgado'
+copyright = '2016-2018, Pedro Salgado'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
