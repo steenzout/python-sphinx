@@ -38,7 +38,7 @@ from recommonmark.parser import CommonMarkParser
 
 
 _package = 'steenzout.sphinx'
-_version = semantic_version.Version('1.0.14')
+_version = semantic_version.Version('1.0.16')
 
 # -- General configuration ------------------------------------------------
 
@@ -81,7 +81,7 @@ master_doc = 'index'
 # General information about the project.
 project = _package
 author = 'Pedro Salgado'
-copyright = '2016, Pedro Salgado'
+copyright = '2016-2018, Pedro Salgado'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
