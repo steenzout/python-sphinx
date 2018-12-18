@@ -28,6 +28,7 @@ __classifiers__ = [
     'Programming Language :: Python :: 2',
     'Programming Language :: Python :: 2.7',
     'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.7',
     'Programming Language :: Python :: 3.6',
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: Implementation :: CPython',
@@ -44,4 +45,4 @@ __maintainer_email__ = u'steenzout@ymail.com'
 
 __url__ = u'https://github.com/steenzout/python-sphinx/'
 
-__version__ = u'1.0.14'
+__version__ = u'1.0.16'
