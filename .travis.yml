@@ -1,41 +1,32 @@
 language: python
-
 branches:
   except:
-    - gh-pages
-
+  - gh-pages
 cache:
   directories:
-    - "${HOME}/.pip"
-
+  - "${HOME}/.pip"
 python:
-  - 3.7
-  - 3.6
-  - 3.5
-  - 2.7
-
-
+- 3.7
+- 3.6
+- 3.5
+- 2.7
 matrix:
   fast_finish: true
   allow_failures:
-    - python: 3.7
-
+  - python: 3.7
 install:
-  - pip install tox
-  - pip install tox-travis
-
+- pip install tox
+- pip install tox-travis
 script:
-  - tox
-
+- tox
 after_success:
-  - pylint steenzout
-  - pip install coveralls
-  - coveralls
-
+- pylint steenzout
+- pip install coveralls
+- coveralls
 deploy:
   provider: pypi
   user: steenzout
   password:
-    secure: "XvyOTcXH2R/Sb402O2PMHygwladhSvyTxPr9vyiFY6twdjpXE1XfKlJv3qOQ7UY3cJmmASczA/spRwQOWpaV5LA2lNhUiUYinQ+eFWtP7vsm4xViZyQgwfrSKm6ZERvfiq/BWCaQ/RgYnfWMtxyVVsuIfzigngb26rAvgU0QpCVKtPYhentCBZvasSug5lZPLrvHG67QxPZqRBU0IcyzipJR0LX9T+5bgfEiPnAgl0I40+BQUrddtXZw75aRUcNVwPi7lBe0Gi51PFjBM9ixpXQQMpcYEMJvURLoX+uyXxm1v+Hgif85R1AjnhNvzIGeK4LGYeQLshYL5wUJofIxVhFKVUSRxhK2EOLYUbjeWpYHCHD3bpC/TxRjja4712XpmqdGAPaKmCYSikWlIWv6gJiwl3hszOLqMZhNmlew+xx/Q5EyhOBFZeikrHIaXPDbef9kJoo4P/2U4SlUO8Hu8o+yLDgmnd5F9VnCMTrC0XMCAZKOtDmpz9rWzSpQEmUqNLpcWgxd574JLn6LLgxIpaYQT0fYLCgLHcAjBfaSbwL6uEtDGhlZGomMQHS/4cntfnZGhJAp+z//hgWbcqZhZoPgNBOmrZcrcWgeh97a4TClVLT6FG4JKAiRV2F8QMz8u8hcFJJB29lnxyxui2nut787SNBnxlwDHg7Oze3bnzo="
+    secure: HvjWLzQRP7NeGf8xxYcCYGZg34EBvobXDVxDppaCKmf0T1MwzpE9//NlzkAnL8cNpCIuK7aajzjeP+xDkk8mi+fc09FP/v/1XmfF2gymeLjjDyvnJgcl2lGW8iYKkH+39FXWhb27UZzPKft++KBgq5lgY6L6mQna+4l2ff6NIbAT5KaGurA59HKvtF4yVbrjByGhLJrdj5RwPf4pQK7sKz9ZGecGOOqz2Sw564ZqjRGipQc1+dRyz71O8nnSlkcNsjDVp2kGbfjyWJVLSAHDdCmsBbGi/immCho29aX3AeKSRy85Zi2TB5EjY5BQd2g948Y1NXRrmVWSj12fPcaqwpgDBPPsbPKDTgy1G3zjt8iCX04HPFu5Um8dbY4VS32oZYdgjkbBiLROmdHAsewZgsSpGzXkX62+zvKTRejqFYD+YStlCPtbJDbyO+mzaSsapReGGbRq42MF0tsB8JAh7eufL8JLAQslbN9vak+90NgWI8Vc/Kk7zB1MyhX8TrSoFag5H29CEJDFKKZhRbf0xLvNpKpyhqzs+J9ZZx9HiqZhByRISjgCyRGZdlDljAPSp7dEJX/1XM6oSS2JmBtmIjVy6aQl3KQFso9GtQXL/DTkz6FQTyU1ezu66uGBDgQKH4UZ/M0ev9sRo2XokUI0IihZG1joIVIdsrK+1axZGqA=
   on:
     tags: true
