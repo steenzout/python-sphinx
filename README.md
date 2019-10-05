@@ -11,5 +11,4 @@
 
 Package to help produce and maintain Sphinx configuration and Makefile templates.
 
-
 [license]:  https://raw.githubusercontent.com/steenzout/python-sphinx/master/LICENSE    "License"
