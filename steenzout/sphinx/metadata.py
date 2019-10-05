@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright 2016 Pedro Salgado
+# Copyright 2016-2019 Pedro Salgado
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ __classifiers__ = [
     'Topic :: Documentation :: Sphinx',
     'Topic :: Software Development :: Documentation'
 ]
-__copyright__ = u'2016-2018, %s' % __author__
+__copyright__ = u'2016-2019, %s' % __author__
 
 __description__ = u'Sphinx configuration for the steenzout GitHub organization.'
 
